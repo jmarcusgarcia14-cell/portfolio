@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Marcus Garcia — Video Editor & Social Media Manager</title>
+<meta name="description" content="John Marcus Garcia is a video editor and social media manager crafting short-form video, UGC, and social content for brands and creators worldwide.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Open Graph / social share preview -->
+<!-- Once your site is live, replace the two "profile.jpg" lines below with the
+     full URL, e.g. https://yoursite.netlify.app/profile.jpg, and og:url with
+     your real site URL — these should be absolute links, not relative ones. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="John Marcus Garcia">
+<meta property="og:title" content="John Marcus Garcia — Video Editor & Social Media Manager">
+<meta property="og:description" content="Short-form video editing, social media management, and content creation for brands and creators.">
+<meta property="og:image" content="profile.jpg">
+<meta property="og:url" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="John Marcus Garcia — Video Editor & Social Media Manager">
+<meta name="twitter:description" content="Short-form video editing, social media management, and content creation for brands and creators.">
+<meta name="twitter:image" content="profile.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- color-grade palette: shadows-teal / highlights-orange ---- */
+    --bg: #0a0e14;
+    --bg-1: #0d1219;
+    --surface: #12171f;
+    --surface-glass: rgba(18, 23, 31, 0.6);
+    --border: rgba(148, 163, 184, 0.12);
+    --border-strong: rgba(148, 163, 184, 0.22);
+    --teal: #2dd4bf;
+    --teal-dim: #1c8f82;
+    --orange: #ff7a45;
+    --orange-dim: #cc5c2e;
+    --text: #f2f5f7;
+    --text-muted: #8a94a6;
+    --text-faint: #545e6e;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --container: 1180px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{ background: var(--orange); color:#0a0e14; }
+
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  img{ max-width:100%; display:block; }
+
+  :focus-visible{
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+  }
+
+  .wrap{ max-width: var(--container); margin:0 auto; padding: 0 32px; }
+
+  /* subtle grain / vignette atmosphere */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      radial-gradient(ellipse 900px 600px at 15% -5%, rgba(255,122,69,0.08), transparent 60%),
+      radial-gradient(ellipse 900px 700px at 100% 10%, rgba(45,212,191,0.09), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  h1,h2,h3,h4{ font-family: var(--font-display); font-weight:600; letter-spacing:-0.01em; }
+
+  .eyebrow{
+    display:flex; align-items:center; gap:10px;
+    font-family: var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    color: var(--teal);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .eyebrow .tc{ color: var(--text-faint); }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background: var(--orange);
+  }
+
+  .section{ position:relative; padding:72px 0; z-index:1; }
+  .section-head{ max-width:640px; margin-bottom:44px; }
+  .section-title{ font-size: clamp(28px, 3.4vw, 40px); }
+  .section-sub{ color: var(--text-muted); margin-top:14px; font-size:16px; max-width:560px; }
+
+  /* ================= NAV ================= */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background: rgba(10,14,20,0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+    transition: border-color .3s ease;
+  }
+  nav{
+    max-width: var(--container); margin:0 auto; padding: 18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{ font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-0.02em; display:flex; align-items:center; gap:9px;}
+  .logo .rec{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255,122,69,0.15);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.4; } }
+
+  .nav-links{ display:flex; gap:36px; }
+  .nav-links a{
+    font-size:14px; color: var(--text-muted);
+    position:relative; padding:4px 0;
+    transition: color .2s ease;
+  }
+  .nav-links a:hover{ color: var(--text); }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:-2px;
+    width:0; height:1px; background: var(--teal);
+    transition: width .25s ease;
+  }
+  .nav-links a:hover::after{ width:100%; }
+
+  .nav-cta{
+    font-family: var(--font-mono); font-size:13px;
+    border:1px solid var(--border-strong);
+    padding:9px 18px; border-radius:100px;
+    color: var(--text); transition: all .25s ease;
+  }
+  .nav-cta:hover{ border-color: var(--orange); color: var(--orange); }
+
+  .menu-btn{
+    display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;
+  }
+  .menu-btn span{ width:22px; height:2px; background: var(--text); display:block; transition: all .25s ease;}
+
+  .mobile-menu{
+    display:none; position:fixed; inset:0; z-index:99;
+    background: var(--bg); padding: 100px 32px 40px;
+    flex-direction:column; gap:26px;
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{ font-family: var(--font-display); font-size:26px; color: var(--text); }
+  .mobile-menu .nav-cta{ align-self:flex-start; margin-top:10px; }
+
+  /* ================= HERO ================= */
+  .hero{
+    min-height:100vh; display:flex; align-items:center;
+    position:relative; padding: 150px 0 80px; z-index:1;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.15fr 0.85fr; gap:60px; align-items:center;
+  }
+  .hero-kicker{
+    font-family: var(--font-mono); font-size:13px; color:var(--text-muted);
+    letter-spacing:.05em; margin-bottom:22px; display:flex; gap:14px; align-items:center;
+  }
+  .hero-kicker .dot{ width:6px; height:6px; border-radius:50%; background: var(--teal); }
+
+  .hero h1{
+    font-size: clamp(42px, 6vw, 74px);
+    line-height:1.03;
+    letter-spacing:-0.02em;
+  }
+  .hero h1 .accent{
+    background: linear-gradient(90deg, var(--orange), var(--teal));
+    -webkit-background-clip: text; background-clip:text; color:transparent;
+  }
+  .hero-role{
+    font-family: var(--font-mono);
+    font-size:16px; color: var(--teal); margin-top:20px; letter-spacing:.02em;
+  }
+  .hero-desc{
+    color: var(--text-muted); font-size:17px; max-width:490px; margin-top:22px;
+  }
+  .hero-actions{ display:flex; gap:16px; margin-top:38px; flex-wrap:wrap; }
+
+  .btn{
+    font-family: var(--font-body); font-weight:600; font-size:14.5px;
+    padding:15px 28px; border-radius:8px; display:inline-flex; align-items:center; gap:8px;
+    transition: all .25s ease; cursor:pointer; border:1px solid transparent;
+  }
+  .btn-primary{
+    background: var(--orange); color:#150b06;
+  }
+  .btn-primary:hover{ background:#ff8f61; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,122,69,0.25); }
+  .btn-ghost{
+    border-color: var(--border-strong); color: var(--text);
+  }
+  .btn-ghost:hover{ border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+  .hero-stats{ display:flex; gap:36px; margin-top:56px; }
+  .hero-stats div{ font-family:var(--font-mono); }
+  .hero-stats strong{ display:block; font-size:24px; color:var(--text); font-family:var(--font-display); }
+  .hero-stats span{ font-size:12px; color: var(--text-faint); text-transform:uppercase; letter-spacing:.06em; }
+
+  /* monitor / preview panel */
+  .monitor{
+    position:relative;
+    background: linear-gradient(160deg, #151b24, #0d1119);
+    border:1px solid var(--border-strong);
+    border-radius:14px;
+    padding:14px;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.6);
+  }
+  .monitor-bar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--border);
+  }
+  .monitor-dots{ display:flex; gap:6px; }
+  .monitor-dots span{ width:8px; height:8px; border-radius:50%; background: var(--text-faint); }
+  .monitor-label{ font-family:var(--font-mono); font-size:11px; color:var(--text-faint); }
+
+  .portrait-photo{
+    aspect-ratio: 4/5; border-radius:8px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,122,69,0.25), transparent 55%),
+      radial-gradient(circle at 75% 70%, rgba(45,212,191,0.28), transparent 55%),
+      linear-gradient(145deg, #1a212c, #0a0d13);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .portrait-photo img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    object-position: center 78%;
+    z-index:1;
+    filter: grayscale(0.35) contrast(1.15) brightness(0.92) saturate(1.05);
+  }
+  .portrait-photo::after{
+    /* teal-shadow / orange-highlight grade, matching the site's color-correction theme */
+    content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:
+      linear-gradient(200deg, rgba(255,122,69,0.32) 0%, transparent 45%),
+      linear-gradient(20deg, rgba(45,212,191,0.30) 0%, transparent 50%);
+    mix-blend-mode: color;
+  }
+  .portrait-photo::before{
+    content:""; position:absolute; inset:0; z-index:3; pointer-events:none;
+    box-shadow: inset 0 0 70px 10px rgba(0,0,0,0.55);
+  }
+  .portrait-fallback{
+    font-family: var(--font-display); font-weight:700; font-size:46px; letter-spacing:.02em;
+    background: linear-gradient(135deg, var(--orange), var(--teal));
+    -webkit-background-clip: text; background-clip:text; color:transparent;
+  }
+  .portrait-caption{
+    margin-top:14px; display:flex; align-items:center; gap:10px; justify-content:center;
+    font-family:var(--font-mono); font-size:11px; color: var(--text-faint); letter-spacing:.05em;
+  }
+  .portrait-caption .dot-sep{ color: var(--orange); }
+
+  /* ================= TIMECODE DIVIDER (signature) ================= */
+  .timecode-strip{
+    position:relative; z-index:1;
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    background: var(--bg-1);
+    padding: 16px 0; overflow:hidden;
+  }
+  .timecode-track{
+    display:flex; gap:48px; white-space:nowrap;
+    font-family: var(--font-mono); font-size:12px; color: var(--text-faint);
+    animation: scrollTicks 30s linear infinite;
+    width:max-content;
+  }
+  .timecode-track span b{ color: var(--teal); font-weight:500; }
+  @keyframes scrollTicks{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  /* ================= ABOUT ================= */
+  .about-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:70px; align-items:start;
+  }
+  .about-lead{ font-size:19px; color: var(--text); line-height:1.75; }
+  .about-lead + p{ margin-top:20px; color: var(--text-muted); font-size:16px; line-height:1.8; }
+
+  .about-highlights{ display:flex; flex-direction:column; gap:0; }
+  .highlight-row{
+    display:flex; align-items:center; gap:18px;
+    padding: 18px 0; border-bottom:1px solid var(--border);
+  }
+  .highlight-row:first-child{ padding-top:0; }
+  .highlight-num{ font-family:var(--font-mono); color: var(--orange); font-size:13px; width:28px; flex-shrink:0; }
+  .highlight-row p{ font-size:15px; color: var(--text); }
+
+  /* ================= SERVICES ================= */
+  .services-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:24px; }
+  .service-card{
+    background: var(--surface-glass);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:34px 28px;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card::before{
+    content:""; position:absolute; inset:0; opacity:0;
+    background: linear-gradient(160deg, rgba(255,122,69,0.08), rgba(45,212,191,0.06));
+    transition: opacity .3s ease;
+  }
+  .service-card:hover{ border-color: var(--border-strong); transform: translateY(-6px); }
+  .service-card:hover::before{ opacity:1; }
+  .service-icon{
+    width:46px; height:46px; border-radius:10px;
+    background: rgba(45,212,191,0.1); border:1px solid rgba(45,212,191,0.25);
+    display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+    position:relative; z-index:1;
+  }
+  .service-card h3{ font-size:20px; margin-bottom:14px; position:relative; z-index:1; }
+  .service-card ul{ position:relative; z-index:1; }
+  .service-card li{
+    font-size:14px; color: var(--text-muted); padding:6px 0; display:flex; align-items:center; gap:9px;
+  }
+  .service-card li::before{ content:"—"; color: var(--orange); font-family:var(--font-mono); }
+
+  /* ================= SKILLS ================= */
+  .skills-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:24px; }
+  .skill-group h4{
+    font-family: var(--font-mono); font-size:12.5px; color: var(--teal);
+    text-transform:uppercase; letter-spacing:.06em; margin-bottom:20px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .skill-group h4::after{ content:""; flex:1; height:1px; background: var(--border); }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .chip{
+    font-size:13.5px; padding:9px 16px; border-radius:100px;
+    border:1px solid var(--border-strong); color: var(--text-muted);
+    transition: all .2s ease;
+  }
+  .chip:hover{ border-color: var(--orange); color: var(--text); background: rgba(255,122,69,0.06); }
+
+  /* ================= TOOLS ================= */
+  .tools-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:18px; }
+  .tool-card{
+    border:1px solid var(--border); border-radius:12px; padding:24px 18px;
+    text-align:center; background: var(--surface-glass); transition: all .25s ease;
+  }
+  .tool-card:hover{ border-color: var(--teal); transform: translateY(-4px); }
+  .tool-card .tool-mark{
+    width:38px; height:38px; margin:0 auto 14px; border-radius:9px;
+    background: linear-gradient(135deg, var(--teal), var(--orange));
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-display); font-weight:700; font-size:14px; color:#0a0e14;
+  }
+  .tool-card span{ font-size:13.5px; color: var(--text-muted); }
+
+  /* ================= PORTFOLIO ================= */
+  .portfolio-filters{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px; }
+  .filter-btn{
+    font-family: var(--font-mono); font-size:12.5px;
+    padding:9px 16px; border-radius:100px; border:1px solid var(--border-strong);
+    color: var(--text-muted); cursor:pointer; background:none; transition: all .2s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{ border-color: var(--orange); color: var(--orange); }
+
+  .portfolio-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:26px; }
+  .project-card{
+    border:1px solid var(--border); border-radius:14px; overflow:hidden;
+    background: var(--surface); transition: all .3s ease;
+  }
+  .project-card:hover{ border-color: var(--border-strong); }
+  .project-thumb{
+    aspect-ratio: 9/16; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background: linear-gradient(160deg, #171d26, #0d1119);
+  }
+  .project-thumb iframe{
+    position:absolute; inset:0; width:100%; height:100%; border:none; z-index:1;
+  }
+  .thumb-cat{
+    position:absolute; top:12px; left:12px; z-index:2;
+    font-family: var(--font-mono); font-size:10.5px; text-transform:uppercase;
+    letter-spacing:.05em; color: var(--teal); background: rgba(8,10,14,0.55);
+    padding:4px 9px; border-radius:5px; pointer-events:none;
+  }
+  /* minimal custom progress bar (replaces YouTube's native control bar) */
+  .yt-progress{
+    position:absolute; left:0; right:0; bottom:0; height:4px; z-index:3;
+    background: rgba(255,255,255,0.15); pointer-events:none;
+  }
+  .yt-progress-fill{
+    height:100%; width:0%; background: var(--orange); position:relative;
+  }
+  .yt-progress-fill::after{
+    content:""; position:absolute; right:-4px; top:50%; transform: translateY(-50%);
+    width:9px; height:9px; border-radius:50%; background: var(--orange);
+  }
+  /* divider between portfolio category groups */
+  .portfolio-group-divider{
+    grid-column: 1 / -1;
+    display:flex; align-items:center; gap:16px;
+    margin: 18px 0 6px;
+    font-family: var(--font-mono); font-size:12px; color: var(--text-faint);
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+  .portfolio-group-divider::after{ content:""; flex:1; height:1px; background: var(--border-strong); }
+
+  .project-info{ padding:20px; }
+  .project-info h3{ font-size:16.5px; margin-bottom:6px; }
+  .project-info p{ font-size:13.5px; color: var(--text-muted); }
+
+  /* horizontal layout for longform videos */
+  .project-card.wide{
+    grid-column: 1 / -1;
+    display:flex; align-items:stretch;
+  }
+  .project-card.wide .project-thumb{ aspect-ratio:16/9; flex:0 0 56%; }
+  .project-card.wide .project-info{
+    flex:1; display:flex; flex-direction:column; justify-content:center; padding:28px 34px;
+  }
+  .project-card.wide .project-info h3{ font-size:19px; }
+  .project-card.wide .project-info p{ font-size:14.5px; }
+
+  .portfolio-more{ display:flex; justify-content:center; margin-top:44px; }
+
+  /* ================= CONTACT ================= */
+  .contact-section{ position:relative; z-index:1; padding: 90px 0; }
+  .contact-inner{
+    text-align:center; max-width:920px; margin:0 auto;
+    border:1px solid var(--border-strong); border-radius:20px;
+    padding:64px 44px; position:relative; overflow:hidden;
+    background: var(--surface-glass);
+  }
+  .contact-inner::before{
+    content:""; position:absolute; inset:-2px; z-index:-1;
+    background: radial-gradient(circle at 30% 0%, rgba(255,122,69,0.18), transparent 55%),
+                radial-gradient(circle at 80% 100%, rgba(45,212,191,0.16), transparent 55%);
+  }
+  .contact-inner h2{ font-size: clamp(28px,4vw,42px); }
+  .contact-inner p{ color: var(--text-muted); margin-top:18px; font-size:16px; max-width:460px; margin-inline:auto; }
+
+  .contact-form-wrap{
+    display:grid; grid-template-columns: 0.8fr 1.2fr; gap:44px; align-items:center;
+    text-align:left; margin-top:52px;
+  }
+  .contact-illustration{ display:flex; align-items:center; justify-content:center; }
+  .contact-illustration svg{ width:100%; max-width:220px; height:auto; }
+
+  .contact-form{ display:flex; flex-direction:column; gap:14px; }
+  .form-row{ display:flex; gap:14px; }
+  .contact-form input, .contact-form textarea{
+    width:100%; background: rgba(255,255,255,0.03); border:1px solid var(--border-strong);
+    border-radius:8px; padding:13px 16px; color: var(--text);
+    font-family: var(--font-body); font-size:14px; transition: border-color .2s ease;
+  }
+  .contact-form input::placeholder, .contact-form textarea::placeholder{ color: var(--text-faint); }
+  .contact-form input:focus, .contact-form textarea:focus{ outline:none; border-color: var(--teal); }
+  .contact-form textarea{ resize:vertical; min-height:96px; }
+  .contact-submit{ align-self:flex-start; border:none; cursor:pointer; margin-top:2px; }
+  .contact-submit:disabled{ opacity:0.6; cursor:not-allowed; }
+  .contact-status{
+    font-size:13.5px; margin-top:2px; min-height:18px;
+    color: var(--text-muted);
+  }
+  .contact-status.is-success{ color: var(--teal); }
+  .contact-status.is-error{ color: var(--orange); }
+
+  .contact-methods{
+    display:flex; gap:36px; justify-content:center; margin-top:44px; flex-wrap:wrap;
+    font-family:var(--font-mono); font-size:13.5px;
+  }
+  .contact-methods a{ color: var(--text-muted); transition: color .2s ease; }
+  .contact-methods a:hover{ color: var(--teal); }
+
+  /* ================= FOOTER ================= */
+  footer{
+    border-top:1px solid var(--border); padding: 36px 0; position:relative; z-index:1;
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  }
+  .footer-inner p{ font-size:13px; color: var(--text-faint); }
+  .footer-inner .fmono{ font-family: var(--font-mono); }
+
+  /* ================= REVEAL ANIMATION ================= */
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 980px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .monitor{ order:-1; max-width:440px; }
+    .about-grid{ grid-template-columns:1fr; gap:44px; }
+    .services-grid{ grid-template-columns:1fr 1fr; }
+    .skills-grid{ grid-template-columns:1fr; gap:36px; }
+    .portfolio-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 720px){
+    .wrap{ padding:0 22px; }
+    .nav-links{ display:none; }
+    .nav-cta{ display:none; }
+    .menu-btn{ display:flex; }
+    .section{ padding:56px 0; }
+    .services-grid{ grid-template-columns:1fr; }
+    .portfolio-grid{ grid-template-columns:1fr; }
+    .project-card.wide{ flex-direction:column; }
+    .project-card.wide .project-thumb{ flex:none; width:100%; }
+    .hero-stats{ gap:24px; }
+    .contact-inner{ padding:56px 24px; }
+    .contact-form-wrap{ grid-template-columns:1fr; gap:28px; }
+    .contact-illustration{ order:-1; max-width:160px; margin:0 auto; }
+    .form-row{ flex-direction:column; }
+    .footer-inner{ flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="logo"><span class="rec"></span>JOHN MARCUS GARCIA</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's Talk →</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary">Let's Talk →</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-kicker"><span class="dot"></span>SJDM, BULACAN, PHILIPPINES — AVAILABLE FOR PROJECTS</div>
+        <h1>John Marcus<br>Garcia<span class="accent">.</span></h1>
+        <div class="hero-role">VIDEO EDITOR &nbsp;/&nbsp; SOCIAL MEDIA MANAGER &nbsp;/&nbsp; CONTENT CREATOR</div>
+        <p class="hero-desc">I create engaging short-form videos and social media content that helps brands, creators, and businesses tell their stories and grow online.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>5+</strong><span>Years Editing</span></div>
+          <div><strong>Global</strong><span>Client Base</span></div>
+          <div><strong>TikTok / IG / YT</strong><span>Platform Focus</span></div>
+        </div>
+      </div>
+
+      <div class="monitor">
+        <div class="monitor-bar">
+          <div class="monitor-dots"><span></span><span></span><span></span></div>
+          <div class="monitor-label">PROFILE.JPG</div>
+        </div>
+        <div class="portrait-photo">
+          <span class="portrait-fallback">JMG</span>
+          <!-- Replace "profile.jpg" below with your photo's filename/path (or a URL) once uploaded -->
+          <img src="profile.jpg" alt="John Marcus Garcia" onerror="this.remove()">
+        </div>
+        <div class="portrait-caption">
+          <span>JOHN MARCUS GARCIA</span>
+          <span class="dot-sep">•</span>
+          <span>VIDEO EDITOR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TIMECODE DIVIDER ================= -->
+  <div class="timecode-strip">
+    <div class="timecode-track" id="tcTrack"></div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">ABOUT</div>
+        <h2 class="section-title">Turning raw footage into scroll-stopping stories</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="about-lead">I am a Video Editor and Social Media Manager with over 5 years of experience creating engaging digital content for clients worldwide.</p>
+          <p>I specialize in short-form video editing, social media content creation, and visual storytelling for platforms such as TikTok, Instagram Reels, Facebook, and YouTube — helping brands and creators transform ideas and raw footage into videos that capture attention and connect with audiences.</p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-row"><span class="highlight-num">01</span><p>5+ years of hands-on video editing experience</p></div>
+          <div class="highlight-row"><span class="highlight-num">02</span><p>Proven track record working with international clients</p></div>
+          <div class="highlight-row"><span class="highlight-num">03</span><p>Full social media management experience, start to finish</p></div>
+          <div class="highlight-row"><span class="highlight-num">04</span><p>Deep expertise in short-form, platform-native content</p></div>
+          <div class="highlight-row"><span class="highlight-num">05</span><p>Sharp read on trends and evolving platform requirements</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">SERVICES</div>
+        <h2 class="section-title">What I bring to the timeline</h2>
+        <p class="section-sub">From first cut to final post — editing, strategy, and management under one roof.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="1.8"><path d="M5 4l14 8-14 8V4z"/></svg>
+          </div>
+          <h3>Video Editing</h3>
+          <ul>
+            <li>TikTok videos</li>
+            <li>Instagram Reels</li>
+            <li>YouTube Shorts</li>
+            <li>UGC ads</li>
+            <li>Promotional videos</li>
+            <li>Storytelling edits</li>
+            <li>Motion graphics</li>
+            <li>Color correction & grading</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+          </div>
+          <h3>Social Media Management</h3>
+          <ul>
+            <li>Content planning</li>
+            <li>Content calendars</li>
+            <li>Scheduling posts</li>
+            <li>Social media optimization</li>
+            <li>Audience engagement</li>
+            <li>Trend research</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">SKILLS</div>
+        <h2 class="section-title">Toolkit built for short-form</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4>Video Editing</h4>
+          <div class="chip-row">
+            <span class="chip">Adobe Premiere Pro</span>
+            <span class="chip">CapCut Pro</span>
+            <span class="chip">After Effects</span>
+            <span class="chip">Motion Graphics</span>
+            <span class="chip">Video Transitions</span>
+            <span class="chip">Color Correction</span>
+            <span class="chip">Color Grading</span>
+            <span class="chip">Audio Sync</span>
+            <span class="chip">Video Storytelling</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Social Media</h4>
+          <div class="chip-row">
+            <span class="chip">Instagram Reels</span>
+            <span class="chip">TikTok Content</span>
+            <span class="chip">Facebook Videos</span>
+            <span class="chip">YouTube Shorts</span>
+            <span class="chip">Content Scheduling</span>
+            <span class="chip">Social Media Optimization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS ================= -->
+  <!-- ================= PORTFOLIO ================= -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">PORTFOLIO</div>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-sub">A placeholder showcase — swap each thumbnail for a real video link or embed when ready.</p>
+      </div>
+
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="shortform">Short-form Videos</button>
+        <button class="filter-btn" data-filter="ads">Social Media Ads</button>
+        <button class="filter-btn" data-filter="longform">Longform Videos</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- populated by JS -->
+      </div>
+
+      <div class="portfolio-more reveal">
+        <a href="https://drive.google.com/drive/folders/1g6nfagoCKzu5dvn0PWvmqVJGxBX4p7Ik?usp=drive_link" target="_blank" rel="noopener" class="btn btn-ghost">View More of My Work →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS ================= -->
+  <section class="section" id="tools">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">SOFTWARE & TOOLS</div>
+        <h2 class="section-title">Inside my workspace</h2>
+      </div>
+      <div class="tools-grid reveal">
+        <div class="tool-card"><div class="tool-mark">Pr</div><span>Premiere Pro</span></div>
+        <div class="tool-card"><div class="tool-mark">CC</div><span>CapCut Pro</span></div>
+        <div class="tool-card"><div class="tool-mark">Ae</div><span>After Effects</span></div>
+        <div class="tool-card"><div class="tool-mark">Ca</div><span>Canva</span></div>
+        <div class="tool-card"><div class="tool-mark">De</div><span>Descript</span></div>
+        <div class="tool-card"><div class="tool-mark">GD</div><span>Google Drive</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact-section" id="contact">
+    <div class="wrap">
+      <div class="contact-inner reveal">
+        <div class="eyebrow" style="justify-content:center;">CONTACT</div>
+        <h2>Let's Create Something Great Together</h2>
+        <p>Available for freelance video editing, social media management, and content creation projects.</p>
+
+        <div class="contact-form-wrap">
+          <div class="contact-illustration" aria-hidden="true">
+            <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="envGrad" x1="0" y1="0" x2="260" y2="200" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2dd4bf"/>
+                  <stop offset="1" stop-color="#ff7a45"/>
+                </linearGradient>
+              </defs>
+              <rect x="20" y="40" width="220" height="140" rx="12" stroke="url(#envGrad)" stroke-width="3"/>
+              <path d="M20 50 L130 140 L240 50" stroke="url(#envGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="72" y1="88" x2="152" y2="88" stroke="url(#envGrad)" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+              <line x1="72" y1="103" x2="132" y2="103" stroke="url(#envGrad)" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xlgqgajq" method="POST">
+            <div class="form-row">
+              <input type="text" id="cfFirst" name="firstName" placeholder="First Name" required>
+              <input type="text" id="cfLast" name="lastName" placeholder="Last Name" required>
+            </div>
+            <input type="email" id="cfEmail" name="email" placeholder="What's your email?" required>
+            <textarea id="cfMessage" name="message" rows="4" placeholder="Your questions..." required></textarea>
+            <button type="submit" class="btn btn-primary contact-submit" id="contactSubmitBtn">Send Message</button>
+            <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact-methods">
+          <a href="mailto:jmarcusgarcia14@gmail.com">jmarcusgarcia14@gmail.com</a>
+          <a href="tel:+639275729659">(+63) 927 572 9659</a>
+          <span>SJDM, Bulacan, PH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="fmono">© 2026 John Marcus Garcia</p>
+    <p class="fmono">EDITED IN PH &nbsp;•&nbsp; EXPORTED FOR THE WORLD</p>
+  </div>
+</footer>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  // ---- mobile menu ----
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', false);
+  }));
+
+  // ---- scroll reveal ----
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ---- timecode ticker ----
+  const tcTrack = document.getElementById('tcTrack');
+  const words = ['ADOBE PREMIERE PRO','CAPCUT PRO','AFTER EFFECTS','COLOR GRADE','TIKTOK','INSTAGRAM REELS','YOUTUBE SHORTS','UGC ADS','CONTENT CALENDAR','TREND RESEARCH'];
+  let tcHtml = '';
+  for (let i = 0; i < 2; i++) {
+    words.forEach((w) => { tcHtml += `<span>${w}</span>`; });
+  }
+  tcTrack.innerHTML = tcHtml;
+
+  // ---- portfolio data + filtering ----
+  // YouTube, Vimeo, Google Drive links, and direct .mp4 URLs are all supported in "video".
+  const projects = [
+    { title: 'Short-form Edit 01', cat: 'shortform', catLabel: 'Short-form Video', dur: '', desc: 'Fast-paced vertical edit built for the scroll.', video: 'https://youtube.com/shorts/aMRDKnhYSTM?feature=share' },
+    { title: 'Short-form Edit 02', cat: 'shortform', catLabel: 'Short-form Video', dur: '', desc: 'Trend-driven edit synced to a viral audio moment.', video: 'https://youtube.com/shorts/9ZiBhSrYP44?feature=share' },
+    { title: 'Short-form Edit 03', cat: 'shortform', catLabel: 'Short-form Video', dur: '', desc: 'Punchy captions and quick cuts for maximum retention.', video: 'https://youtube.com/shorts/51FehIK7Z2s?feature=share' },
+    { title: 'Short-form Edit 04', cat: 'shortform', catLabel: 'Short-form Video', dur: '', desc: 'Native platform pacing with strong hook in the first second.', video: 'https://youtube.com/shorts/MO_lPKVM2W0?feature=share' },
+    { title: 'Short-form Edit 05', cat: 'shortform', catLabel: 'Short-form Video', dur: '', desc: 'Beat-synced cuts built for discovery feeds.', video: 'https://youtube.com/shorts/9VFgOwbHKcc?feature=share' },
+
+    { title: 'Social Ad 01', cat: 'ads', catLabel: 'Social Media Ad', dur: '', desc: 'Conversion-focused ad with a clear call to action.', video: 'https://youtube.com/shorts/YmBXJeWNgiw?feature=share' },
+    { title: 'Social Ad 02', cat: 'ads', catLabel: 'Social Media Ad', dur: '', desc: 'Brand-forward paid social edit built for feed placement.', video: 'https://youtube.com/shorts/ts1v_FNNUGk?feature=share' },
+    { title: 'Social Ad 03', cat: 'ads', catLabel: 'Social Media Ad', dur: '', desc: 'Direct-response style ad optimized for click-through.', video: 'https://youtube.com/shorts/9wuODFyq_dg?feature=share' },
+    { title: 'Social Ad 04', cat: 'ads', catLabel: 'Social Media Ad', dur: '', desc: 'Product-led ad edit with clean motion titles.', video: 'https://youtube.com/shorts/vFaTRYrgeME?feature=share' },
+
+    { title: 'Longform Edit 01', cat: 'longform', catLabel: 'Longform Video', dur: '', desc: 'Extended edit with pacing, color grading, and structure.', video: 'https://youtu.be/gYpUy6hpKlo' },
+    { title: 'Longform Edit 02', cat: 'longform', catLabel: 'Longform Video', dur: '', desc: 'Narrative-driven long-form piece with layered audio.', video: 'https://youtu.be/BlJ6Tp5LTQg' },
+    { title: 'Longform Edit 03', cat: 'longform', catLabel: 'Longform Video', dur: '', desc: 'Full-length edit with motion graphics and title cards.', video: 'https://youtu.be/J9AkZI-Dgy4' },
+  ];
+
+  // ---- build a minimal, chrome-free embed for each video link ----
+  // YouTube videos use the IFrame Player API directly (controls=0) with a
+  // custom slim progress bar drawn on top, so no title, channel, play/pause,
+  // or YouTube branding shows — just the video and a moving progress line.
+  function getYouTubeId(url){
+    if (!url) return null;
+    const m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+    return m ? m[1] : null;
+  }
+
+  // fallback for non-YouTube links (Vimeo / Google Drive) — native controls
+  function embedAutoplaySrc(url){
+    if (!url) return null;
+    const vimeo = url.match(/vimeo\.com\/(\d+)/);
+    if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}?autoplay=1&muted=1&loop=1`;
+    const drive = url.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+    if (drive) return `https://drive.google.com/file/d/${drive[1]}/preview`;
+    return null;
+  }
+
+  // ---- lazy-load YouTube players: only initialize (and start streaming)
+  // once a card actually scrolls into view, and pause it again once it
+  // scrolls out — keeps the page from streaming all 12 videos at once ----
+  const lazyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const thumb = entry.target;
+      if (entry.isIntersecting){
+        if (thumb._ytPlayer){
+          try { thumb._ytPlayer.playVideo(); } catch(err){}
+        } else if (window.YT && window.YT.Player){
+          const target = thumb.querySelector('.yt-embed-target[data-video-id]');
+          if (target && !target.dataset.inited){
+            target.dataset.inited = '1';
+            const videoId = target.dataset.videoId;
+            const progressFill = thumb.querySelector('.yt-progress-fill');
+            thumb._ytPlayer = new YT.Player(target, {
+              videoId,
+              playerVars: {
+                autoplay: 1, mute: 1, loop: 1, playlist: videoId,
+                controls: 0, rel: 0, playsinline: 1, disablekb: 1,
+                modestbranding: 1, fs: 0, iv_load_policy: 3
+              },
+              events: {
+                onReady: (e) => {
+                  e.target.playVideo();
+                  setInterval(() => {
+                    try {
+                      const d = e.target.getDuration();
+                      const c = e.target.getCurrentTime();
+                      if (d > 0 && progressFill) progressFill.style.width = (c / d * 100) + '%';
+                    } catch (err) {}
+                  }, 300);
+                }
+              }
+            });
+          }
+        }
+      } else if (thumb._ytPlayer && thumb._ytPlayer.pauseVideo){
+        try { thumb._ytPlayer.pauseVideo(); } catch(err){}
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '150px 0px' });
+
+  function setupLazyPlayers(){
+    grid.querySelectorAll('.project-thumb').forEach(thumb => {
+      if (thumb.querySelector('.yt-embed-target[data-video-id]')) lazyObserver.observe(thumb);
+    });
+  }
+  window.onYouTubeIframeAPIReady = setupLazyPlayers;
+
+  const groupOrder = [
+    { key: 'shortform', label: 'Short-form Videos' },
+    { key: 'ads', label: 'Social Media Ads' },
+    { key: 'longform', label: 'Longform Videos' },
+  ];
+
+  const grid = document.getElementById('portfolioGrid');
+
+  function buildCard(p){
+    const card = document.createElement('div');
+    card.className = 'project-card reveal is-visible' + (p.cat === 'longform' ? ' wide' : '');
+    const ytId = getYouTubeId(p.video);
+    let thumbInner;
+    if (ytId){
+      thumbInner = `<div class="yt-embed-target" data-video-id="${ytId}"></div><div class="yt-progress"><div class="yt-progress-fill"></div></div>`;
+    } else {
+      const embed = embedAutoplaySrc(p.video);
+      thumbInner = embed
+        ? `<iframe src="${embed}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
+        : `<span style="font-family:var(--font-mono); font-size:12px; color:var(--text-faint); z-index:2;">No video linked yet</span>`;
+    }
+    card.innerHTML = `
+      <div class="project-thumb">
+        <span class="thumb-cat">${p.catLabel}</span>
+        ${thumbInner}
+      </div>
+      <div class="project-info">
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+      </div>`;
+    return card;
+  }
+
+  function renderProjects(filter){
+    grid.innerHTML = '';
+    if (filter === 'all'){
+      groupOrder.forEach((g, idx) => {
+        const items = projects.filter(p => p.cat === g.key);
+        if (!items.length) return;
+        if (idx > 0){
+          const divider = document.createElement('div');
+          divider.className = 'portfolio-group-divider';
+          divider.textContent = g.label;
+          grid.appendChild(divider);
+        }
+        items.forEach(p => grid.appendChild(buildCard(p)));
+      });
+    } else {
+      projects.filter(p => p.cat === filter).forEach(p => grid.appendChild(buildCard(p)));
+    }
+    setupLazyPlayers();
+  }
+  renderProjects('all');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderProjects(btn.dataset.filter);
+    });
+  });
+
+  // ---- header border on scroll ----
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    header.style.borderBottomColor = window.scrollY > 20 ? 'var(--border-strong)' : 'var(--border)';
+  });
+
+  // ---- contact form (submits to Formspree, delivers straight to your inbox) ----
+  const contactForm = document.getElementById('contactForm');
+  const contactStatus = document.getElementById('contactStatus');
+  const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    contactSubmitBtn.disabled = true;
+    contactSubmitBtn.textContent = 'Sending...';
+    contactStatus.textContent = '';
+    contactStatus.className = 'contact-status';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        contactStatus.textContent = "Thanks — your message is on its way. I'll get back to you soon.";
+        contactStatus.classList.add('is-success');
+      } else {
+        contactStatus.textContent = "Something went wrong sending that. Please try again, or email me directly below.";
+        contactStatus.classList.add('is-error');
+      }
+    } catch (err) {
+      contactStatus.textContent = "Couldn't send — check your connection and try again, or email me directly below.";
+      contactStatus.classList.add('is-error');
+    } finally {
+      contactSubmitBtn.disabled = false;
+      contactSubmitBtn.textContent = 'Send Message';
+    }
+  });
+</script>
+
+</body>
+</html>
